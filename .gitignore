@@ -1,0 +1,72 @@
+# 忽略所有 node_modules 目录下的文件，因为它们可以通过 npm 或 yarn 重新安装
+node_modules/
+
+# 忽略构建或编译输出的文件，这取决于你使用的构建工具
+dist/
+*.min.*
+*.map
+
+# 忽略编辑器和 IDE 生成的文件或目录
+.vscode/
+.idea/
+.project
+.classpath
+*.launch
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swn
+*.bak
+*.orig
+*.rej
+*.lock
+*.DS_Store
+*.db
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# 忽略环境相关的文件
+.env
+.env.*
+.env.development
+.env.test
+.env.production
+npm-shrinkwrap.json
+yarn.lock
+
+# 忽略本地配置和缓存
+npm/
+yarn/
+yarn-debug.log*
+yarn-error.log*
+coverage/
+reports/
+tmp/
+cache/
+*.iml
+*.log
+*.pid
+*.pyc
+*.pyo
+*.swp
+*.tmp
+*.zip
+*.egg-info/
+
+# 忽略测试相关的文件
+testem.log
+karma.log
+*.spec.js
+*.test.js
+
+# 忽略源码控制工具的备份文件
+# 这里假设你使用的是 Git，如果是 SVN 则会不同
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

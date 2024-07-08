@@ -1,0 +1,22 @@
+{
+  "name": "qiankun-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install": "run-p install:*",
+    "install:vue-main": "cd vue-main && npm install",
+    "install:vue-app1": "cd vue-app1 && npm install",
+    "install:vue-app2": "cd vue-app2 && npm install",
+    "start": "run-p start:*",
+    "start:vue-main": "cd vue-main && npm run serve",
+    "start:vue-app1": "cd vue-app1 && npm run serve",
+    "start:vue-app2": "cd vue-app2 && npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
