@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>Hello App2</h1>
+    <el-button type="primary">App2 Element Button</el-button>
     <input v-model="num" />
   </div>
 </template>

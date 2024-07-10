@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>Hello App1</h1>
+    <el-button type="primary">App1 Element Button</el-button>
     <img :src="logo" alt="">
   </div>
 </template>

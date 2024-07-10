@@ -1,5 +1,6 @@
 const { name } = require('./package.json')
 const { defineConfig } = require('@vue/cli-service')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = defineConfig({
   transpileDependencies: true,
   devServer: {
@@ -24,6 +25,12 @@ module.exports = defineConfig({
           type: 'asset/resource', // 使用资源模块处理图片文件
         },
       ]
-    }
+    },
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[id].css',
+      }),
+    ],
   },
 })

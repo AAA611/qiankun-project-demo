@@ -39,17 +39,17 @@ export const mountMicroApp = (fullPath) => {
     if (instance) {
       // 
     } else {
-      activeMicroAppMap[app.name] = loadMicroApp({ ...app, props: { store } })
+      activeMicroAppMap[app.name] = loadMicroApp({ ...app, props: { store } }, {
+        sandbox: { strictStyleIsolation: true }
+      })
     }
   }
 }
 
 export const unmountMicroApp = (allTabs) => {
   const allTabPaths = allTabs.map(tab => tab.fullPath)
-  console.log("🚀 ~ unmountMicroApp ~ allTabPaths:", allTabPaths)
   for (const name in activeMicroAppMap) {
     const app = microApps.find(app => {
-      console.log("🚀 ~ unmountMicroApp ~ app:", app)
       return app.name === name
     })
     if (!allTabPaths.some(path => path.startsWith(app.activeRule))) {

@@ -1,9 +1,13 @@
 import './public-path'
 import Vue from 'vue'
+import ElementUI from 'element-ui'
 import App from './App.vue'
 import { createRouter, destroyRouter } from './router'
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
+
+Vue.use(ElementUI)
 
 let instance = null
 function render(props = {}) {
